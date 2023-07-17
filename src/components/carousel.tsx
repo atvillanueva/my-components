@@ -1,3 +1,4 @@
+import { Children } from "react";
 import ReactSlick, { Settings } from "react-slick";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -8,7 +9,6 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { getValidChildren } from "../utils/get-valid-children";
 
 interface CarouselProps extends Settings {
   spacing?: number;
@@ -111,7 +111,7 @@ function NextArrow(props: IconButtonProps) {
 function Carousel(props: CarouselProps) {
   const { spacing, ArrowProps, children, ...other } = props;
 
-  const arrayChildren = getValidChildren(children);
+  const arrayChildren = Children.toArray(children);
 
   return (
     <Box position="relative">

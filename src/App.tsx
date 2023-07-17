@@ -20,7 +20,7 @@ function Item() {
 
 function App() {
   const settings = {
-    spacing: 2,
+    spacing: 5,
     infinite: false,
     slidesToShow: 4,
     slidesToScroll: 4,
